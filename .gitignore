@@ -4,3 +4,6 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# pre-edit backups of source photography, not needed for the live site
+assets/dylan-assets/originals/

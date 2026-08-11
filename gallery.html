@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gallery — Genius Creative</title>
-<meta name="description" content="Browse original paintings from the Genius Creative studio — elegant, psychedelic fine art by Dylan Blanchard, Gregory Milligan, and Josias Edouard." />
+<meta name="description" content="Browse original paintings and photography from the Genius Creative studio — elegant, psychedelic fine art by Dylan Blanchard, Gregory Milligan, and Josias Edouard." />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -38,66 +38,353 @@
     <div class="wrap hero-inner">
       <span class="eyebrow">The Gallery</span>
       <h1>Original works</h1>
-      <p class="lede">A collection spanning three practices — bold, saturated, and built to hold a room's attention. Inquire on any piece for pricing and availability.</p>
+      <p class="lede">Paintings and photography from the Genius Creative studio — bold, saturated fine art alongside the desert photography that informs it. Click a painting for its full story, or a photo to view it full resolution. Inquire on any piece for pricing and availability.</p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
       <div class="filters">
-        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn active" data-filter="all">All Artists</button>
         <button class="filter-btn" data-filter="dylan">Dylan Blanchard</button>
         <button class="filter-btn" data-filter="gregory">Gregory Milligan</button>
         <button class="filter-btn" data-filter="josias">Josias Edouard</button>
+        <span class="filter-sep"></span>
+        <select class="filter-select" aria-label="Filter by medium">
+          <option value="all">All Mediums</option>
+          <option value="painting">Painting</option>
+          <option value="photography">Photography</option>
+        </select>
       </div>
 
-      <div class="grid grid-3">
-
-        <div class="canvas" data-tags="dylan">
-          <div class="paint" style="--a:10deg;--c1:var(--psy-1);--c2:var(--psy-3);--c3:var(--psy-4);--c4:var(--psy-2);"></div>
+      <div class="photo-columns">
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/desert-bloom-no-3.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-01-800.jpg" srcset="assets/dylan-assets/work-01-800.jpg 800w, assets/dylan-assets/work-01-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Desert Bloom No. 3 by Dylan Blanchard" />
+          </div>
           <div class="label"><div class="t">Desert Bloom No. 3</div><div class="m">Dylan Blanchard · Oil on canvas · 36 × 48"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="gregory">
-          <div class="paint" style="--a:70deg;--c1:var(--psy-2);--c2:var(--psy-4);--c3:var(--psy-1);--c4:var(--psy-3);"></div>
+        </a>
+        <a class="piece" data-artist="gregory" data-medium="painting" href="paintings/vantage.html">
+          <div class="canvas">
+            <div class="paint" style="--a:70deg;--c1:var(--psy-2);--c2:var(--psy-4);--c3:var(--psy-1);--c4:var(--psy-3);"></div>
+          </div>
           <div class="label"><div class="t">Vantage</div><div class="m">Gregory Milligan · Acrylic on canvas · 40 × 60"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="dylan">
-          <div class="paint" style="--a:140deg;--c1:var(--psy-3);--c2:var(--psy-1);--c3:var(--psy-2);--c4:var(--psy-4);"></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/afterglow.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-02-800.jpg" srcset="assets/dylan-assets/work-02-800.jpg 800w, assets/dylan-assets/work-02-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Afterglow by Dylan Blanchard" />
+          </div>
           <div class="label"><div class="t">Afterglow</div><div class="m">Dylan Blanchard · Mixed media · 24 × 30"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="gregory">
-          <div class="paint" style="--a:200deg;--c1:var(--psy-4);--c2:var(--psy-2);--c3:var(--psy-3);--c4:var(--psy-1);"></div>
+        </a>
+        <a class="piece" data-artist="gregory" data-medium="painting" href="paintings/night-frequency.html">
+          <div class="canvas">
+            <div class="paint" style="--a:200deg;--c1:var(--psy-4);--c2:var(--psy-2);--c3:var(--psy-3);--c4:var(--psy-1);"></div>
+          </div>
           <div class="label"><div class="t">Night Frequency</div><div class="m">Gregory Milligan · Oil on canvas · 48 × 48"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="josias">
-          <div class="paint" style="--a:260deg;--c1:var(--psy-1);--c2:var(--psy-4);--c3:var(--psy-2);--c4:var(--psy-3);"></div>
+        </a>
+        <a class="piece" data-artist="josias" data-medium="painting" href="paintings/concept-study-i.html">
+          <div class="canvas">
+            <div class="paint" style="--a:260deg;--c1:var(--psy-1);--c2:var(--psy-4);--c3:var(--psy-2);--c4:var(--psy-3);"></div>
+          </div>
           <div class="label"><div class="t">Concept Study I</div><div class="m">Josias Edouard · Acrylic on panel · 20 × 24"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="dylan">
-          <div class="paint" style="--a:320deg;--c1:var(--psy-2);--c2:var(--psy-3);--c3:var(--psy-4);--c4:var(--psy-1);"></div>
+        </a>
+        <a class="piece" data-artist="josias" data-medium="painting" href="paintings/concept-study-ii.html">
+          <div class="canvas">
+            <div class="paint" style="--a:340deg;--c1:var(--psy-3);--c2:var(--psy-1);--c3:var(--psy-4);--c4:var(--psy-2);"></div>
+          </div>
+          <div class="label"><div class="t">Concept Study II</div><div class="m">Josias Edouard · Acrylic on panel · 24 × 30"</div></div>
+        </a>
+        <a class="piece" data-artist="josias" data-medium="painting" href="paintings/neon-vestibule.html">
+          <div class="canvas">
+            <div class="paint" style="--a:80deg;--c1:var(--psy-4);--c2:var(--psy-3);--c3:var(--psy-1);--c4:var(--psy-2);"></div>
+          </div>
+          <div class="label"><div class="t">Neon Vestibule</div><div class="m">Josias Edouard · Mixed media on panel · 18 × 24"</div></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/bloodstone.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-03-800.jpg" srcset="assets/dylan-assets/work-03-800.jpg 800w, assets/dylan-assets/work-03-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Bloodstone by Dylan Blanchard" />
+          </div>
           <div class="label"><div class="t">Bloodstone</div><div class="m">Dylan Blanchard · Oil on canvas · 30 × 40"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="gregory">
-          <div class="paint" style="--a:30deg;--c1:var(--psy-3);--c2:var(--psy-4);--c3:var(--psy-1);--c4:var(--psy-2);"></div>
+        </a>
+        <a class="piece" data-artist="gregory" data-medium="painting" href="paintings/interior-weather.html">
+          <div class="canvas">
+            <div class="paint" style="--a:30deg;--c1:var(--psy-3);--c2:var(--psy-4);--c3:var(--psy-1);--c4:var(--psy-2);"></div>
+          </div>
           <div class="label"><div class="t">Interior Weather</div><div class="m">Gregory Milligan · Acrylic on canvas · 36 × 36"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="dylan">
-          <div class="paint" style="--a:100deg;--c1:var(--psy-4);--c2:var(--psy-1);--c3:var(--psy-3);--c4:var(--psy-2);"></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/saguaro-static.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-04-800.jpg" srcset="assets/dylan-assets/work-04-800.jpg 800w, assets/dylan-assets/work-04-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Saguaro Static by Dylan Blanchard" />
+          </div>
           <div class="label"><div class="t">Saguaro Static</div><div class="m">Dylan Blanchard · Oil on canvas · 24 × 36"</div></div>
-        </div>
-
-        <div class="canvas" data-tags="dylan">
-          <div class="paint" style="--a:180deg;--c1:var(--psy-1);--c2:var(--psy-2);--c3:var(--psy-4);--c4:var(--psy-3);"></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/halo-drift.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-05-800.jpg" srcset="assets/dylan-assets/work-05-800.jpg 800w, assets/dylan-assets/work-05-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Halo Drift by Dylan Blanchard" />
+          </div>
           <div class="label"><div class="t">Halo Drift</div><div class="m">Dylan Blanchard · Mixed media · 40 × 40"</div></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/second-sight.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-06-800.jpg" srcset="assets/dylan-assets/work-06-800.jpg 800w, assets/dylan-assets/work-06-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Second Sight by Dylan Blanchard" />
+          </div>
+          <div class="label"><div class="t">Second Sight</div><div class="m">Dylan Blanchard · Oil on canvas · 30 × 30"</div></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/ember-coil.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-07-800.jpg" srcset="assets/dylan-assets/work-07-800.jpg 800w, assets/dylan-assets/work-07-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Ember Coil by Dylan Blanchard" />
+          </div>
+          <div class="label"><div class="t">Ember Coil</div><div class="m">Dylan Blanchard · Oil on canvas · 30 × 40"</div></div>
+        </a>
+        <a class="piece" data-artist="dylan" data-medium="painting" href="paintings/night-bloom.html">
+          <div class="artwork">
+            <img src="assets/dylan-assets/work-08-800.jpg" srcset="assets/dylan-assets/work-08-800.jpg 800w, assets/dylan-assets/work-08-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Night Bloom by Dylan Blanchard" />
+          </div>
+          <div class="label"><div class="t">Night Bloom</div><div class="m">Dylan Blanchard · Oil on canvas · 30 × 36"</div></div>
+        </a>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-01-900.jpg" srcset="assets/gregory-photography/photo-01-900.jpg 900w, assets/gregory-photography/photo-01-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 01" />
         </div>
-
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-02-900.jpg" srcset="assets/gregory-photography/photo-02-900.jpg 900w, assets/gregory-photography/photo-02-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 02" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-03-900.jpg" srcset="assets/gregory-photography/photo-03-900.jpg 900w, assets/gregory-photography/photo-03-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 03" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-04-900.jpg" srcset="assets/gregory-photography/photo-04-900.jpg 900w, assets/gregory-photography/photo-04-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 04" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-05-900.jpg" srcset="assets/gregory-photography/photo-05-900.jpg 900w, assets/gregory-photography/photo-05-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 05" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-06-900.jpg" srcset="assets/gregory-photography/photo-06-900.jpg 900w, assets/gregory-photography/photo-06-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 06" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-07-900.jpg" srcset="assets/gregory-photography/photo-07-900.jpg 900w, assets/gregory-photography/photo-07-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 07" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-08-900.jpg" srcset="assets/gregory-photography/photo-08-900.jpg 900w, assets/gregory-photography/photo-08-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 08" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-09-900.jpg" srcset="assets/gregory-photography/photo-09-900.jpg 900w, assets/gregory-photography/photo-09-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 09" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-10-900.jpg" srcset="assets/gregory-photography/photo-10-900.jpg 900w, assets/gregory-photography/photo-10-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 10" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-11-900.jpg" srcset="assets/gregory-photography/photo-11-900.jpg 900w, assets/gregory-photography/photo-11-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 11" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-12-900.jpg" srcset="assets/gregory-photography/photo-12-900.jpg 900w, assets/gregory-photography/photo-12-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 12" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-13-900.jpg" srcset="assets/gregory-photography/photo-13-900.jpg 900w, assets/gregory-photography/photo-13-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 13" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-14-900.jpg" srcset="assets/gregory-photography/photo-14-900.jpg 900w, assets/gregory-photography/photo-14-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 14" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-15-900.jpg" srcset="assets/gregory-photography/photo-15-900.jpg 900w, assets/gregory-photography/photo-15-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 15" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-16-900.jpg" srcset="assets/gregory-photography/photo-16-900.jpg 900w, assets/gregory-photography/photo-16-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 16" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-17-900.jpg" srcset="assets/gregory-photography/photo-17-900.jpg 900w, assets/gregory-photography/photo-17-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 17" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-18-900.jpg" srcset="assets/gregory-photography/photo-18-900.jpg 900w, assets/gregory-photography/photo-18-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 18" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-19-900.jpg" srcset="assets/gregory-photography/photo-19-900.jpg 900w, assets/gregory-photography/photo-19-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 19" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-20-900.jpg" srcset="assets/gregory-photography/photo-20-900.jpg 900w, assets/gregory-photography/photo-20-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 20" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-21-900.jpg" srcset="assets/gregory-photography/photo-21-900.jpg 900w, assets/gregory-photography/photo-21-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 21" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-22-900.jpg" srcset="assets/gregory-photography/photo-22-900.jpg 900w, assets/gregory-photography/photo-22-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 22" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-23-900.jpg" srcset="assets/gregory-photography/photo-23-900.jpg 900w, assets/gregory-photography/photo-23-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 23" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-24-900.jpg" srcset="assets/gregory-photography/photo-24-900.jpg 900w, assets/gregory-photography/photo-24-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 24" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-25-900.jpg" srcset="assets/gregory-photography/photo-25-900.jpg 900w, assets/gregory-photography/photo-25-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 25" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-26-900.jpg" srcset="assets/gregory-photography/photo-26-900.jpg 900w, assets/gregory-photography/photo-26-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 26" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-27-900.jpg" srcset="assets/gregory-photography/photo-27-900.jpg 900w, assets/gregory-photography/photo-27-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 27" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-28-900.jpg" srcset="assets/gregory-photography/photo-28-900.jpg 900w, assets/gregory-photography/photo-28-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 28" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-29-900.jpg" srcset="assets/gregory-photography/photo-29-900.jpg 900w, assets/gregory-photography/photo-29-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 29" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-30-900.jpg" srcset="assets/gregory-photography/photo-30-900.jpg 900w, assets/gregory-photography/photo-30-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 30" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-31-900.jpg" srcset="assets/gregory-photography/photo-31-900.jpg 900w, assets/gregory-photography/photo-31-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 31" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-32-900.jpg" srcset="assets/gregory-photography/photo-32-900.jpg 900w, assets/gregory-photography/photo-32-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 32" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-33-900.jpg" srcset="assets/gregory-photography/photo-33-900.jpg 900w, assets/gregory-photography/photo-33-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 33" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-34-900.jpg" srcset="assets/gregory-photography/photo-34-900.jpg 900w, assets/gregory-photography/photo-34-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 34" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-35-900.jpg" srcset="assets/gregory-photography/photo-35-900.jpg 900w, assets/gregory-photography/photo-35-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 35" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-36-900.jpg" srcset="assets/gregory-photography/photo-36-900.jpg 900w, assets/gregory-photography/photo-36-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 36" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-37-900.jpg" srcset="assets/gregory-photography/photo-37-900.jpg 900w, assets/gregory-photography/photo-37-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 37" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-38-900.jpg" srcset="assets/gregory-photography/photo-38-900.jpg 900w, assets/gregory-photography/photo-38-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 38" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-39-900.jpg" srcset="assets/gregory-photography/photo-39-900.jpg 900w, assets/gregory-photography/photo-39-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 39" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-40-900.jpg" srcset="assets/gregory-photography/photo-40-900.jpg 900w, assets/gregory-photography/photo-40-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 40" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-41-900.jpg" srcset="assets/gregory-photography/photo-41-900.jpg 900w, assets/gregory-photography/photo-41-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 41" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-42-900.jpg" srcset="assets/gregory-photography/photo-42-900.jpg 900w, assets/gregory-photography/photo-42-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 42" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-43-900.jpg" srcset="assets/gregory-photography/photo-43-900.jpg 900w, assets/gregory-photography/photo-43-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 43" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-44-900.jpg" srcset="assets/gregory-photography/photo-44-900.jpg 900w, assets/gregory-photography/photo-44-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 44" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-45-900.jpg" srcset="assets/gregory-photography/photo-45-900.jpg 900w, assets/gregory-photography/photo-45-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 45" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-46-900.jpg" srcset="assets/gregory-photography/photo-46-900.jpg 900w, assets/gregory-photography/photo-46-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 46" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-47-900.jpg" srcset="assets/gregory-photography/photo-47-900.jpg 900w, assets/gregory-photography/photo-47-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 47" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-48-900.jpg" srcset="assets/gregory-photography/photo-48-900.jpg 900w, assets/gregory-photography/photo-48-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 48" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-49-900.jpg" srcset="assets/gregory-photography/photo-49-900.jpg 900w, assets/gregory-photography/photo-49-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 49" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-50-900.jpg" srcset="assets/gregory-photography/photo-50-900.jpg 900w, assets/gregory-photography/photo-50-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 50" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-51-900.jpg" srcset="assets/gregory-photography/photo-51-900.jpg 900w, assets/gregory-photography/photo-51-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 51" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-52-900.jpg" srcset="assets/gregory-photography/photo-52-900.jpg 900w, assets/gregory-photography/photo-52-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 52" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-53-900.jpg" srcset="assets/gregory-photography/photo-53-900.jpg 900w, assets/gregory-photography/photo-53-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 53" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-54-900.jpg" srcset="assets/gregory-photography/photo-54-900.jpg 900w, assets/gregory-photography/photo-54-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 54" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-55-900.jpg" srcset="assets/gregory-photography/photo-55-900.jpg 900w, assets/gregory-photography/photo-55-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 55" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-56-900.jpg" srcset="assets/gregory-photography/photo-56-900.jpg 900w, assets/gregory-photography/photo-56-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 56" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-57-900.jpg" srcset="assets/gregory-photography/photo-57-900.jpg 900w, assets/gregory-photography/photo-57-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 57" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-58-900.jpg" srcset="assets/gregory-photography/photo-58-900.jpg 900w, assets/gregory-photography/photo-58-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 58" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-59-900.jpg" srcset="assets/gregory-photography/photo-59-900.jpg 900w, assets/gregory-photography/photo-59-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 59" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-60-900.jpg" srcset="assets/gregory-photography/photo-60-900.jpg 900w, assets/gregory-photography/photo-60-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 60" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-61-900.jpg" srcset="assets/gregory-photography/photo-61-900.jpg 900w, assets/gregory-photography/photo-61-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 61" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-62-900.jpg" srcset="assets/gregory-photography/photo-62-900.jpg 900w, assets/gregory-photography/photo-62-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 62" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-63-900.jpg" srcset="assets/gregory-photography/photo-63-900.jpg 900w, assets/gregory-photography/photo-63-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 63" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-64-900.jpg" srcset="assets/gregory-photography/photo-64-900.jpg 900w, assets/gregory-photography/photo-64-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 64" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-65-900.jpg" srcset="assets/gregory-photography/photo-65-900.jpg 900w, assets/gregory-photography/photo-65-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 65" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-66-900.jpg" srcset="assets/gregory-photography/photo-66-900.jpg 900w, assets/gregory-photography/photo-66-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 66" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-67-900.jpg" srcset="assets/gregory-photography/photo-67-900.jpg 900w, assets/gregory-photography/photo-67-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 67" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-68-900.jpg" srcset="assets/gregory-photography/photo-68-900.jpg 900w, assets/gregory-photography/photo-68-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 68" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-69-900.jpg" srcset="assets/gregory-photography/photo-69-900.jpg 900w, assets/gregory-photography/photo-69-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 69" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-70-900.jpg" srcset="assets/gregory-photography/photo-70-900.jpg 900w, assets/gregory-photography/photo-70-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 70" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-71-900.jpg" srcset="assets/gregory-photography/photo-71-900.jpg 900w, assets/gregory-photography/photo-71-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 71" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-72-900.jpg" srcset="assets/gregory-photography/photo-72-900.jpg 900w, assets/gregory-photography/photo-72-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 72" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-73-900.jpg" srcset="assets/gregory-photography/photo-73-900.jpg 900w, assets/gregory-photography/photo-73-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 73" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-74-900.jpg" srcset="assets/gregory-photography/photo-74-900.jpg 900w, assets/gregory-photography/photo-74-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 74" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-75-900.jpg" srcset="assets/gregory-photography/photo-75-900.jpg 900w, assets/gregory-photography/photo-75-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 75" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-76-900.jpg" srcset="assets/gregory-photography/photo-76-900.jpg 900w, assets/gregory-photography/photo-76-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 76" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-77-900.jpg" srcset="assets/gregory-photography/photo-77-900.jpg 900w, assets/gregory-photography/photo-77-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 77" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-78-900.jpg" srcset="assets/gregory-photography/photo-78-900.jpg 900w, assets/gregory-photography/photo-78-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 78" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-79-900.jpg" srcset="assets/gregory-photography/photo-79-900.jpg 900w, assets/gregory-photography/photo-79-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 79" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-80-900.jpg" srcset="assets/gregory-photography/photo-80-900.jpg 900w, assets/gregory-photography/photo-80-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 80" />
+        </div>
+        <div class="artwork" data-artist="gregory" data-medium="photography">
+          <img src="assets/gregory-photography/photo-81-900.jpg" srcset="assets/gregory-photography/photo-81-900.jpg 900w, assets/gregory-photography/photo-81-2200.jpg 2200w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" loading="lazy" alt="Outside — Arizona desert photography by Gregory Milligan, frame 81" />
+        </div>
       </div>
     </div>
   </section>
