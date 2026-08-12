@@ -160,13 +160,15 @@ header.site::before {
   transform: translateY(6px);
   transition: all 0.2s ease;
 }
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 .dropdown a { display: block; padding: 10px 20px; color: var(--text-dim); }
-.dropdown a:hover { color: var(--gold); background: rgba(255,255,255,0.03); }
+.dropdown a:hover,
+.dropdown a:focus-visible { color: var(--gold); background: rgba(255,255,255,0.03); }
 
 .nav-toggle {
   display: none;
@@ -237,6 +239,8 @@ header.site::before {
 
 @media (prefers-reduced-motion: reduce) {
   .swirl::before, .swirl::after { animation: none; }
+  .canvas .paint { animation: none; }
+  html { scroll-behavior: auto; }
 }
 
 /* ---------- Hero ---------- */
@@ -330,6 +334,11 @@ section.alt { background: var(--bg-alt); }
 .photo-columns .artwork img,
 .painting-detail .artwork img {
   cursor: zoom-in;
+}
+.photo-columns .artwork img:focus-visible,
+.painting-detail .artwork img:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 /* a painting card (gallery grid, artist page, featured work) links to its detail page */
@@ -437,7 +446,12 @@ a.piece:hover { opacity: 0.85; }
   line-height: 1;
   cursor: pointer;
 }
-.lightbox-close:hover { border-color: var(--gold); color: var(--gold); }
+.lightbox-close:hover,
+.lightbox-close:focus-visible { border-color: var(--gold); color: var(--gold); }
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
 @media (max-width: 620px) {
   .lightbox { padding: 20px; }
 }
@@ -513,7 +527,11 @@ a.piece:hover { opacity: 0.85; }
   font-family: var(--sans);
 }
 .filter-select:hover { color: var(--text); border-color: var(--text-dim); }
-.filter-select:focus { outline: none; border-color: var(--gold); color: var(--text); }
+.filter-select:focus { border-color: var(--gold); color: var(--text); }
+.filter-select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
 .filter-select option { background: var(--bg-card); color: var(--text); }
 .filter-btn {
   padding: 9px 18px;
@@ -528,6 +546,10 @@ a.piece:hover { opacity: 0.85; }
   font-family: var(--sans);
 }
 .filter-btn:hover { color: var(--text); border-color: var(--text-dim); }
+.filter-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
 .filter-btn.active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
 
 .hidden { display: none !important; }
@@ -612,10 +634,41 @@ a.piece:hover { opacity: 0.85; }
   font-size: 0.95rem;
 }
 .field input:focus, .field textarea:focus, .field select:focus {
-  outline: none;
   border-color: var(--gold);
 }
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
 .field textarea { resize: vertical; min-height: 110px; }
+
+.panel.panel-highlight {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.35);
+}
+.form-status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+.form-status.ok { color: var(--psy-3); }
+.form-status.err { color: #ff7b7b; }
+
+.sample-note {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  margin-bottom: 0.75em;
+}
 
 /* ---------- Footer ---------- */
 
