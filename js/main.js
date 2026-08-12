@@ -149,16 +149,34 @@ function initLightbox() {
   const closeBtn = lightbox.querySelector('.lightbox-close');
   let lastFocus = null;
   let open = false;
+  let currentImg = null;
 
   const getFocusable = () =>
     Array.from(lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(
       (el) => !el.hasAttribute('disabled')
     );
 
-  const openLightbox = (img) => {
-    lastFocus = document.activeElement;
+  // Only images actually on screen — excludes items hidden by the gallery filters.
+  const visibleImgs = () => artworkImgs.filter((img) => img.offsetParent !== null);
+
+  const showImage = (img) => {
+    currentImg = img;
     lightboxImg.src = largestSrcsetUrl(img);
     lightboxImg.alt = img.alt || 'Artwork at full resolution';
+  };
+
+  const showByOffset = (offset) => {
+    const list = visibleImgs();
+    if (!list.length) return;
+    let idx = list.indexOf(currentImg);
+    if (idx === -1) idx = 0;
+    idx = (idx + offset + list.length) % list.length;
+    showImage(list[idx]);
+  };
+
+  const openLightbox = (img) => {
+    lastFocus = document.activeElement;
+    showImage(img);
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
     open = true;
@@ -172,6 +190,7 @@ function initLightbox() {
     lightboxImg.alt = '';
     document.body.style.overflow = '';
     open = false;
+    currentImg = null;
     if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
     lastFocus = null;
   };
@@ -199,6 +218,16 @@ function initLightbox() {
     if (e.key === 'Escape') {
       e.preventDefault();
       closeLightbox();
+      return;
+    }
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      showByOffset(1);
+      return;
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      showByOffset(-1);
       return;
     }
     if (e.key === 'Tab') {
