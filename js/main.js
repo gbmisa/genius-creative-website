@@ -1,8 +1,6 @@
 // Genius Creative — shared behavior: nav, gallery filters, photo grids, lightbox, contact
 
-// Set to a Formspree / Getform / FormSubmit endpoint when ready (e.g. "https://formspree.io/f/xxxx").
-// Until then, submit uses a mailto: fallback so inquiries still leave the browser.
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = 'https://formspree.io/f/xeaqjbzr';
 const MAILTO_FALLBACK = 'studio@geniuscreative.com';
 
 document.addEventListener('DOMContentLoaded', () => {
