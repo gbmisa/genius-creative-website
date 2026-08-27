@@ -7,3 +7,8 @@ node_modules/
 
 # pre-edit backups of source photography, not needed for the live site
 assets/dylan-assets/originals/
+
+# Business brief — local only. Guides design work but must NOT be published:
+# holds positioning, buyer strategy, and per-artist plans. Removed from git
+# history 2026-08-27 after it was found served publicly via GitHub Pages.
+CLAUDE.md
