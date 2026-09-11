@@ -1,0 +1,125 @@
+/* ===========================================================
+   Genius Creative — page components
+   Hero, grids, cards/pillars, before/after comparisons, and
+   the artist/person header. Reusable page-building blocks.
+   =========================================================== */
+
+.hero {
+  position: relative;
+  padding: 140px 0 110px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 720px; }
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.6vw, 4.4rem);
+  margin-bottom: 0.35em;
+}
+
+.hero .lede {
+  font-size: 1.15rem;
+  max-width: 560px;
+  margin-bottom: 2em;
+}
+
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero.small { padding: 96px 0 72px; }
+.hero.small h1 { font-size: clamp(2.1rem, 4.4vw, 3.1rem); }
+
+/* ---------- Grids ---------- */
+
+.grid {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+}
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 32px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.card h3 { font-size: 1.25rem; }
+.card .eyebrow { margin-bottom: 0.6em; }
+
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); }
+.pillars .card { border: none; border-right: 1px solid var(--line); }
+.pillars .card:last-child { border-right: none; }
+.pillars .card:hover { transform: none; }
+@media (max-width: 760px) {
+  .pillars { grid-template-columns: 1fr; }
+  .pillars .card { border-right: none; border-bottom: 1px solid var(--line); }
+}
+
+/* ---------- Before/After ---------- */
+
+.ba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+}
+.ba > div { padding: 0; }
+.ba .canvas { aspect-ratio: 1 / 1; }
+.ba .tag {
+  position: absolute; top: 16px; left: 16px; z-index: 2;
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 12px; background: rgba(0,0,0,0.55); border: 1px solid var(--line);
+}
+@media (max-width: 620px) { .ba { grid-template-columns: 1fr; } }
+
+/* ---------- Person / Artist header ---------- */
+
+.person-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.person-hero .canvas { aspect-ratio: 1 / 1; }
+@media (max-width: 860px) {
+  .person-hero { grid-template-columns: 1fr; }
+}
+
+.role-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 5px 12px;
+  margin-bottom: 1em;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.sample-note {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  margin-bottom: 0.75em;
+}
