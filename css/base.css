@@ -1,0 +1,129 @@
+/* ===========================================================
+   Genius Creative — base layer
+   Design tokens, reset, typography, buttons, layout rhythm,
+   accessibility conventions, utilities. Load this first.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0b0a10;
+  --bg-alt: #14121b;
+  --bg-card: #1a1723;
+  --line: rgba(245, 241, 232, 0.1);
+  --text: #f5f1e8;
+  --text-dim: #b7b0c2;
+  --gold: #c9a24b;
+
+  --psy-1: #ff5ecb;
+  --psy-2: #6a5cff;
+  --psy-3: #21e6c1;
+  --psy-4: #ff9f45;
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --maxw: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+p { margin: 0 0 1em; color: var(--text-dim); }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85em;
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+.btn-ghost {
+  color: var(--text);
+  border-color: var(--line);
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ---------- Section rhythm ---------- */
+
+section { padding: 96px 0; }
+section.tight { padding: 64px 0; }
+section.alt { background: var(--bg-alt); }
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* ---------- Accessibility: shared focus treatment ---------- */
+
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---------- Utility ---------- */
+
+.hidden { display: none !important; }
+.mt-0 { margin-top: 0; }
+.center { text-align: center; }
+.max-60 { max-width: 640px; }

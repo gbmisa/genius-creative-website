@@ -1,0 +1,55 @@
+/* ===========================================================
+   Genius Creative — contact & inquiry forms
+   The conversion layer: form panels, fields, and status
+   messaging for the art-inquiry and remodel-consult paths.
+   =========================================================== */
+
+.form-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 860px) { .form-panels { grid-template-columns: 1fr; } }
+
+.panel {
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  padding: 40px;
+}
+
+.panel h2 { font-size: 1.6rem; }
+
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 12px 14px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--gold);
+}
+.field textarea { resize: vertical; min-height: 110px; }
+
+.panel.panel-highlight {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.35);
+}
+.form-status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+.form-status.ok { color: var(--psy-3); }
+.form-status.err { color: #ff7b7b; }

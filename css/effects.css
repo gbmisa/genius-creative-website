@@ -1,0 +1,82 @@
+/* ===========================================================
+   Genius Creative — psychedelic accent layer
+   Swirl backgrounds and the animated "canvas" placeholder
+   paint, plus the reduced-motion overrides for both. Per the
+   design system's balance rule, all psychedelic energy is
+   isolated here — the UI layers stay restrained.
+   =========================================================== */
+
+.swirl {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.swirl::before, .swirl::after {
+  content: '';
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  background: conic-gradient(from 0deg,
+    var(--psy-1), var(--psy-2), var(--psy-3), var(--psy-4), var(--psy-1));
+  filter: blur(110px) saturate(140%);
+  opacity: 0.28;
+  animation: spin 40s linear infinite;
+}
+
+.swirl::after {
+  animation-duration: 60s;
+  animation-direction: reverse;
+  opacity: 0.16;
+  width: 100%; height: 100%; top: 0; left: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Painting canvas placeholder art ---------- */
+
+.canvas {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #000;
+}
+
+.canvas .paint {
+  position: absolute;
+  inset: -25%;
+  background: conic-gradient(from var(--a, 0deg) at 50% 50%,
+    var(--c1, var(--psy-1)), var(--c2, var(--psy-2)), var(--c3, var(--psy-3)), var(--c4, var(--psy-4)), var(--c1, var(--psy-1)));
+  filter: blur(38px) saturate(160%) contrast(115%);
+  mix-blend-mode: screen;
+  animation: spin 34s linear infinite;
+}
+
+.canvas img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
+}
+
+/* ---------- Motion preferences ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .swirl::before, .swirl::after { animation: none; }
+  .canvas .paint { animation: none; }
+  html { scroll-behavior: auto; }
+}
